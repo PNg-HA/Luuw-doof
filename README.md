@@ -12,7 +12,9 @@
 
 	Ta biến đổi dạng toán 1 chút cho thuận tiện: từ (-1)^n . (x^2n) = (-x^2)^n.
 	
+## Câu 5:
 	
+	Lần đầu nhìn mình định dùng hàm đệ quy
 
 
 
