@@ -1,5 +1,5 @@
 # Luuw-doof
-## Cau 1:
+## Câu 1:
 
 	Ta có thể mở rộng vấn đề, không chỉ là 11 mà có thể là 100, 1000, 10000. Từ đó ta phải có 1 cách giải tổng quát hơn. Hãy bắt đầu từ con số 11, ta có :
 		x    *   x   = x^2  
@@ -10,6 +10,10 @@
 
 	Ta có 5 phép nhân.
 	Ta thử tìm cách khác xem có thể ít hơn 5 lần nhân không.
+	
+## Câu 2:
+	Mình hay xử lý những bài thao tác với chữ số của 1 số bằng cách chuyển các chữ số thành phần tử của 1 mảng
+	
 ## Câu 4:
 
 	Ta biến đổi dạng toán 1 chút cho thuận tiện: từ (-1)^n . (x^2n) = (-x^2)^n.
@@ -86,7 +90,44 @@
 
 ## Câu 8:
 
-	Mình phải xét điều kiện không những kỹ càng mà còn phải làm bài mình tối ưu, ví dự xét điều kiện tam giác vuông trước hay tam giác cân trước thì bài làm sẽ gọn hơn, và mình thấy xét điều kiện tam giác vuông thì bài gọn hơn hướng kia.
+	Mình phải xét điều kiện không những kỹ càng mà còn phải làm bài mình tối ưu, ví dự xét điều kiện tam giác vuông trước hay tam giác cân trước thì bài làm sẽ gọn hơn, và mình thấy xét điều kiện tam giác vuông thì bài gọn hơn hướng kia. Và đây là phần thân code:
+	
+	{
+			float x(0),y(0),z(0);
+			while ( (x <= 0 || y <= 0 || z <= 0) || (x > y + z || y > x + z || z > y + x) ){
+				cout <<"Nhap lan luot x, y, z: "; cin >> x >> y >> z;
+			}
+			
+			float a(x), b(y), c(z); // Nhin lai ms thay minh dung a,bc nen dong nay gan x,y,z cho a,b,c 
+			cout << " sss: "<<(a*a + b*b - c*c)/(2*a*b)<<endl;
+			if ( ( (a*a + b*b - c*c)/(2*a*b) != 0 ) && ( (b*b + c*c - a*a)/(2*b*c) !=0 ) && ( (c*c + a*a - b*b)/(2*c*a) != 0 ) )
+				{
+				
+				if ( (a*a + b*b - c*c)/(2*a*b) > 0 && (b*b + c*c - a*a)/(2*b*c) > 0 && (c*c + a*a - b*b)/(2*c*a) > 0 )
+				
+					if (a == b || b == c || c == a)
+					
+						if (a == b && b == c && c == a)
+							cout << "Tam giac  deu\n";
+						else cout << "Tam giac nhon can\n";
+						
+					else 
+						cout << "Tam giac nhon \n";
+					
+				else 
+					if (a == b || b == c || c == a)	
+						cout << "Tam giac tu can\n";
+					else
+						cout << "Tam giac tu\n"; 
+				}
+			
+			else 
+				if (a == b || b == c || c == a)
+					cout << "Tam giac vuong can\n";
+				
+				else cout << " Tam giac vuong\n";
+			return 0;
+		}
 
 ## Câu 9:
 
